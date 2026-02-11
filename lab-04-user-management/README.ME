@@ -1,0 +1,54 @@
+# Lab 04 – User Management & File Permissions
+
+## Objective
+Understand how Linux manages users, groups, file ownership, and permissions.
+
+## Environment
+- Host: MacBook (Apple Silicon)
+- Hypervisor: UTM
+- Guest OS: Kali Linux
+
+## Activities Performed
+
+### 1. User Creation
+- Created a new user named `labuser`.
+- Assigned a password during setup.
+
+### 2. Sudo Privileges
+- Added `labuser` to the `sudo` group.
+- Verified group membership using:
+  - `groups labuser`
+  - `id labuser`
+- Confirmed sudo access by running a sudo command as `labuser`.
+
+### 3. File Permission Testing
+- Switched to `labuser`.
+- Created a file named `secure.txt`.
+- Checked default permissions using `ls -l`.
+
+### 4. Modified Permissions
+- Changed permissions using:
+  - `chmod 600 secure.txt`
+  - `chmod 777 secure.txt`
+- Observed how permissions affected access.
+
+### 5. Directory Access Control
+- Attempted to access `/home/labuser` from another user.
+- Received “Permission denied”.
+- Confirmed Linux restricts access to user home directories by default.
+
+## Key Learnings
+
+- Linux controls access using users and groups.
+- `sudo` provides temporary administrative privileges.
+- File permissions use read (r), write (w), and execute (x).
+- `chmod` changes file permissions.
+- `chown` changes file ownership.
+- Directory permissions affect whether a user can access files inside.
+- Root can bypass permission restrictions.
+
+## Result
+
+Successfully practiced Linux user management and file permission control inside Kali Linux VM.
+
+
